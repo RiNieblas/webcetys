@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>web CETYS</title>
+    <link href = "https://fonts.googleapis.com/css?family=Noto Sans" rel = "stylesheet">
+    <style>
+        * {
+            font-family: "Noto Sans";
+        }
+    </style>
+</head>
+<body>
+    <form action = "results.html" method = "GET" enctype = "multipart/form-data">
+        <div>
+            <h2>Colegio de Administración y Negocios</h2>
+            <div>
+                <label for = "nombreDocente"></label>
+                <input type = "text" placeholder = "Nombre del Docente">
+            </div>
+            <div>
+                <label for = "vinculacion"></label>
+                <select name = "vinculacion" id = "vinculacion">
+                    <option disabled selected>Vinculación...</option>
+                    <option value = "tiempoCompleto">Tiempo Completo</option>
+                    <option value = "medioTiempo">Medio Tiempo</option>
+                    <option value = "asignatura">Asignatura</option>
+                </select>
+            </div>
+            <div>
+                <label for = "categoria"></label>
+                <select name = "categoria" id = "categoria">
+                    <option disabled selected>Categpría...</option>
+                    <option value = "docenteInvestigador">Docente Investigador</option>
+                    <option value = "docenteVinculador">Docente Vinculador</option>
+                    <option value = "coordinadorAcademico">Coordinador Académico</option>
+                </select>
+            </div>
+            <div>
+                <label for = "campus"></label>
+                <select name = "campus" id = "campus">
+                    <option disabled selected>Campus...</option>
+                    <option value = "tijuana">Tijuana</option>
+                    <option value = "ensenada">Ensenada</option>
+                    <option value = "mexicali">Mexicali</option>
+                </select>
+            </div>
+        </div> <hr>
+        <div>
+            <label for = "seleccion"></label>
+            <select name = "seleccion" id = "seleccion">
+                <option disabled selected hidden>Seleccione actividad...</option>
+
+                <optgroup label = "Promoción y Desarrollo"></option>
+                <!-- En este espacio podrá incluir los datos relacionados con reconocimientos, concursos, diplomados, certificaciones, grados académicos u otra actividad que se considere de promoción y desarrollo profesional. -->
+                    <option value = "reconocimiento">Reconocimiento</option>
+                    <option value = "concurso">Concurso</option>
+                    <option value = "diplomado">Diplomado</option>
+                    <option value = "certificacion">Certificación</option>
+                    <option value = "gradosAcadémicos">Grados Académicos</option>
+
+                <optgroup label = "Investigación y Producción del Conocimiento"></option>
+                <!-- En este espacio podría incluir conferencias, publicaciones, investigaciones en curso y participación con ponencias nacionales e internacionales. -->
+                    <option value = "conferenciaImpartida">Conferencia impartida</option>
+                    <option value = "publicacionArticuloCientifico">Publicación Artículo Científico</option>
+                    <option value = "investigacionEnCurso">Investigación en Curso</option>
+                    <option value = "estanciaDeInvestigacion">Estancia de Investigación</option>
+                    <option value = "presentacionPonenciaNacional">Presentación Ponencia Nacional</option>
+                    <option value = "presentacionPonenciaInternacional">Presentación Ponencia Internacional</option>
+                    
+                <optgroup label = "Capacitación y Actualización"></option>
+                <!-- En este espacio podrá incluir cursos de capacitación recibidos e impartidos, así como aquellos de especialización. -->
+                    <option value = "capacitacionRecibida">Capacitación Recibida</option>
+                    <option value = "capacitacionImpartida">Capacitación Impartida</option>
+                    <option value = "educacionContinuaYDeEspecializacion">Educación Continua Y De Especialización</option>
+
+                <optgroup label = "Difusión y Divulgación"></option>
+                <!-- En este espacio podrá incluir la participación en actividades de Experto Cetys, columnas de Uniradio, revistas de difusión-divulgación, podcast, etc. -->
+                    <option value = "publicacionArticuloDivulgacion">Publicación de Artículo de Divulgación</option>
+                    <option value = "participacionExpertoCetys">Participación de Experto CETYS</option>
+                    <option value = "podcast">Podcast</option>
+                    <option value = "columnaUniradio">Columna Uniradio</option>
+
+                <optgroup label = "Vinculación Académica"></option>
+                <!-- En este espacio podrá incluir los proyectos de vinculación en los que hayan participados docentes y estudiantes. Estos pueden ser desde clases, los realizados desde grupos estudiantiles así como aquellos que se trabajan desde servicio social. -->
+                    <option value = "clasesEspejo">Clases Espejo</option>
+                    <option value = "servicioSocial">Servicio Social</option>
+                    <option value = "consultoria">Consultoría</option>
+                    <option value = "proyectosRealizadosPorEstudiante">Proyectos Realizados por Estudiante</option>
+                    <option value = "mencionesEspeciales">Menciones Especiales</option>
+
+                <optgroup label = "Organización de Eventos"></option>
+                <!-- En este espacio podrá incluir los eventos que se hayan realizado desde sus clases a los que hayan sido convocados personas fuera del campus, por ejemplo clases espejo, invitados a clase, etc. -->
+                    <option value = "claseEspejo">Clase Espejo</option>
+                    <option value = "invitadosAClase">Invitados a Clase</option>
+                    <option value = "conferencia">Conferencia</option>
+                    <option value = "conversatorio">Conversatorio</option>
+                    <option value = "simposio">Simposio</option>
+
+                <optgroup label = "Servicio Institucional"></option>
+                <!-- En este espacio podrá incluir los eventos en servicio de la organización. -->
+                    <option value = "mentorias">Mentorías</option>
+                    <option value = "proyecto">Proyecto</option>
+
+                <optgroup label = "Experiencias Internacionales Estudiantes"></option>
+                <!-- En este espacio podrá incluir la participación de estudiantes en experiencias internacionales sobresalientes. -->
+                    <option value = "intercambio">Intercambio</option>
+                    <option value = "estancias">Estancias</option>
+                    <option value = "cursosInternacionales">Cursos Internacionales</option>
+                    <option value = "adadeum">Adádeum</option>
+
+                <optgroup label = "Proyectos Relevantes de Estudiantes"></option>
+                <!-- En este apartado podrá incluir los proyectos realizados por estudiantes o bien las menciones recibidas a estudiantes de la licenciatura. -->
+                    <option value = "proyecto">Proyecto</option>
+                    <option value = "mencion">Mención</option>
+                    <option value = "organizacionDeEvento">Organización de Evento</option>
+                
+                <option value = "otro">Otro...</option>
+
+            </select>
+        </div> <hr>
+        <div>
+            <label for = "fecha"></label>
+            <input type = "date" placeholder = "Fecha">
+        </div>
+        <div>
+            <label for="descripcion"></label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción General"></textarea>
+        </div>
+        <div>
+            <label for = "archivo"></label>
+            <input type="file" id = "archivo" name = "archivo">
+        </div> <br>
+        <button type = "reset">Reset</button>
+        <button type = "submit">Submit</button>
+    </form>
+</body>
+</html>
