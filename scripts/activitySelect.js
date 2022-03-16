@@ -1,11 +1,11 @@
+hide();
+
 function hide() {
     var hidden = document.getElementsByClassName("hidden");
 
     for (var i = 0; i < hidden.length; i ++) {
         hidden[i].style.display = "none";
-
     }
-
 }
 
 function display() {
@@ -42,7 +42,5 @@ function display() {
 
         default:
             break;
-
     }
-    
 }
