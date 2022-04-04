@@ -1,4 +1,6 @@
 <!-- TODO:
+	* Cambiar value del select de actividades para que tenga el mismo nombre que la actividad seleccionada.
+	* Conseguir que el formulario haga todos los espacios mostrados en pantalla requisitos, y que los que estén ocultos se les quite ese requisito.
     * Hacer que el input de la fecha tenga como predeterminado la fecha actual.
     * Crear una función que mande correo electrónico de aviso para cada Dirección correspondiente.
     * Generar una base de datos en la que se guarde las respuestas subidas del formulario.
@@ -12,24 +14,25 @@
 <head>
 	<title>web CETYS</title>
 	<link href = "https://fonts.googleapis.com/css?family=Raleway" rel = "stylesheet"/>
-	<link rel = "stylesheet" href = "styles.css"/>
+	<link rel = "stylesheet" href = "src/styles.css"/>
+	<script type = "module" src = "src/index.js"></script>
 </head>
 <body>
     <div> <!-- Título de la página -->
         <h1>Colegio de Administración y Negocios</h1>
     </div>
     <div> <!-- Botón para navegar a base de datos -->
-        <a href = "database/db.html">Ir a la Base de Datos</a>
+        <a href = "database.html">Ir a la Base de Datos</a>
     </div>
     <div> <!-- Contenedor de formulario -->
-        <form>
+        <form action = "" id = "webForm">
             <div> <!-- Divisor de sección 1 -->
                 <div> <!-- Título de sección 1 -->
                     <h2>Datos Generales</h2>
                 </div>
                 <div> <!-- Nombre del Docente -->
-                    <label for = "nombreDocente">Nombre del Docente</label>
-                    <input type = "text" name = "nombreDocente" id = "nombreDocente" placeholder = "Nombre Completo">
+                    <label for = "nombre">Nombre del Docente</label>
+                    <input type = "text" name = "nombre" id = "nombre" placeholder = "Nombre Completo">
                 </div>
                 <div> <!-- Vinculación -->
                     <label for = "vinculacion">Vinculación</label>
@@ -193,7 +196,7 @@
                 </div>
                 <div> <!-- Fecha -->
                     <label for = "fecha">Fecha</label>
-                    <input type = "date">
+                    <input type = "date" id = "fecha">
                 </div>
                 <div> <!-- Descripción General -->
                     <label for = "descripcion">Descripción General</label>
@@ -206,9 +209,10 @@
             </div>
             <div> <!-- Acciones -->
                 <button type = "reset" onclick = "hide()">Borrar</button>
-                <button type = "submit">Enviar</button>
+                <button type = "submit" id = "submitBtn">Enviar</button>
             </div>
         </form>
     </div>
-    <script src = "scripts/activitySelect.js"></script>
+	<script src = "src/index.js"></script>
+    <script src = "src/activitySelect.js"></script>
 </body>
