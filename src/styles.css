@@ -1,5 +1,76 @@
+/*
+CETYS Universidad: 
+	Color de fondo: 
+	Color de letra: #ffd000
+*/
+
 * {
 	font-family: "Raleway";
-	padding: 1px;
-	
+	font-weight: 400;
+	font-size: 15px;
+	padding: 2px;
+	text-align: center;
+	box-sizing: border-box;
 }
+
+header {
+	background-color: #ffd000;
+	padding: 20px;
+}
+
+nav {
+	padding-top: 20px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 45px;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 30px;
+}
+
+h3 {
+	font-weight: 500;
+	font-size: 25px;
+}
+
+button {
+	background-color: rgb(38, 38, 38);
+	color: rgb(255, 255, 255);
+	border-radius: 40px;
+	font-size: 14px;
+	height: 40px;
+	line-height: 15px;
+	text-align: center;
+	width: 200px;
+}
+
+input[type="select"], input[type="text"], input[type="date"], select, textarea {
+	width: 350px;
+}
+
+#forn-container {
+	width: 75%;
+}
+/*
+.column {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 800px) {
+	.column {
+		width: 100%;
+	}
+}
+*/
