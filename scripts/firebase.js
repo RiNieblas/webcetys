@@ -43,10 +43,10 @@ function insertData() {
 		Descripción: descripcion.value
 	})
 	.then(()=> {
-		alert("Información subida satisfactoriamente :D");
+		alert("Envío de información exitoso.");
 	})
 	.catch((error) => {
-		alert("Alerta, hay un error." + error);
+		alert("Lo sentimos, ha sucedido un error." + error);
 	});
 }
 
