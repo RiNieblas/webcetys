@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>web CETYS</title>
+    <link href = "https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel = "stylesheet" href = "src/styles.css"/>
+</head>
+<body>
+<div class = "topnav">
+	<a href = "database.html">Base de Datos</a>
+	<a href = "404.html">404</a>
+	<a href = "login.html">Log In</a>
+</div>
+<header><!-- Título de la página -->
+    <h1>Colegio de Administración y Negocios</h1>
+    <h2>CETYS Universidad</h2>
+</header>
+<nav class = "buttons"> <!-- Botón para navegar a base de datos -->
+    <button onclick = "document.location = 'database.html'">Ir a la Base de Datos</a>
+</nav>
+	<form>
+    <div class = "container"> <!-- Contenedor de formulario -->
+		<div> <!-- Divisor de sección 1 -->
+            <div> <!-- Título de sección 1 -->
+                <h2>Datos Generales</h2>
+            </div>
+            <div> <!-- Nombre del Docente -->
+                <label for = "nombre">Nombre del Docente</label> <br>
+                <input type = "text" name = "nombre" id = "nombre" placeholder = "Nombre Completo">
+            </div>
+            <div> <!-- Vinculación -->
+                <label for = "vinculacion">Vinculación</label> <br>
+                <select name = "vinculacion" id = "vinculacion">
+                    <option selected disabled>Selecciona una opción...</option>
+                    <option value = "Tiempo Completo">Tiempo Completo</option>
+                    <option value = "Medio Tiempo">Medio Tiempo</option>
+                    <option value = "Coordinación">Coordinación</option>
+                    <option value = "Asignatura">Asignatura</option>
+                </select>
+            </div>
+            <div> <!-- Categoría -->
+                <label for = "categoria">Categoría</label> <br>
+                <select name = "categoria" id = "categoria">
+                    <option selected disabled>Selecciona una opción...</option>
+                    <option value = "Coordinador Académico">Coordinador Académico</option>
+                    <option value = "Docente Investigador">Docente Investigador</option>
+                    <option value = "Docente Vinculador">Docente Vinculador</option>
+                </select>
+            </div>
+            <div> <!-- Campus -->
+                <label for = "campus">Campus</label> <br>
+                <select name = "campus" id = "campus">
+                    <option selected disabled>Selecciona una opción...</option>
+                    <option value = "Campus Tijuana">Tijuana</option>
+                    <option value = "Campus Mexicali">Mexicali</option>
+                    <option value = "Campus Ensenada">Ensenada</option>
+                </select>
+            </div>
+        </div>
+        <div> <!-- Divisor de sección 2 -->
+            <div> <!-- Título de sección 2 -->
+                <h2>Generación de Conocimiento</h2>
+            </div>
+            <div> <!-- Selección de Actividad -->
+                <label for = "actividad">Producto relacionado con</label> <br>
+                <select name = "actividad" id = "actividad" onchange = "display()">
+                    <option disabled selected>Seleccione una opción...</option>
+				    <option value = "1">Promoción y Desarrollo</option>
+				    <option value = "2">Investigación y Producción del Conocimiento</option>
+				    <option value = "3">Capacitación y Actualización</option>
+				    <option value = "4">Difusión y Divulgación</option>
+				    <option value = "5">Vinculación Académica</option>
+				    <option value = "6">Organización de Eventos</option>
+				    <option value = "7">Servicio Institucional</option>
+				    <option value = "8">Experiencias Internacionales Estudiantes</option>
+				    <option value = "9">Proyectos Relevantes de Estudiantes</option>
+				    <option value = "0">Otro</option>
+                </select>
+            </div>
+            	<div class = "hidden" id = "act1"> <!-- Promoción y Desarrollo -->
+            	    <label for = "actividad1">Promoción y Desarrollo</label> <br>
+            	    <select id = "actividad1">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Reconocimiento">Reconocimiento</option>
+            	        <option value = "Concurso">Concurso</option>
+            	        <option value = "Diplomado">Diplomado</option>
+            	        <option value = "Certificación">Certificación</option>
+            	        <option value = "Grados Académicos">Grados Académicos</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act2"> <!-- Investigación y Producción del Conocimiento -->
+            	    <label for = "act2">Investigación y Producción del Conocimiento</label> <br>
+            	    <select id = "actividad2">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Conferencia impartida">Conferencia impartida</option>
+            	        <option value = "Publicación Artículo Científico">Publicación Artículo Científico</option>
+            	        <option value = "Investigación en Curso">Investigación en Curso</option>
+            	        <option value = "Estancia de Investigación">Estancia de Investigación</option>
+            	        <option value = "Presentación Ponencia Nacional">Presentación Ponencia Nacional</option>
+            	        <option value = "Presentación Ponencia Internacional">Presentación Ponencia Internacional</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act3"> <!-- Capacitación y Actualización -->
+            	    <label for = "act3">Capacitación y Actualización</label> <br>
+            	    <select id = "actividad3">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Capacitación Recibida">Capacitación Recibida</option>
+            	        <option value = "Capacitación Impartida">Capacitación Impartida</option>
+            	        <option value = "Educación Continua Y De Especialización">Educación Continua Y De Especialización</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act4"> <!-- Difusión y Divulgación -->
+            	    <label for = "act4">Difusión y Divulgación</label> <br>
+            	    <select id = "actividad4">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Publicación de Artículo de Divulgación">Publicación de Artículo de Divulgación</option>
+            	        <option value = "Participación de Experto CETYS">Participación de Experto CETYS</option>
+            	        <option value = "Podcast">Podcast</option>
+            	        <option value = "Columna Uniradio">Columna Uniradio</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act5"> <!-- Vinculación Académica -->
+            	    <label for = "act5">Vinculación Académica</label> <br>
+            	    <select id = "actividad5">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Clases Espejo">Clases Espejo</option>
+            	        <option value = "Clases Espejo">Clases Espejo</option>
+            	        <option value = "Consultoría">Consultoría</option>
+            	        <option value = "Proyectos Realizados por Estudiante">Proyectos Realizados por Estudiante</option>
+            	        <option value = "Menciones Especiales">Menciones Especiales</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act6"> <!-- Organización de Eventos -->
+            	    <label for = "act6">Organización de Eventos</label> <br>
+            	    <select id = "actividad6">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Clase Espejo">Clase Espejo</option>
+            	        <option value = "Invitados a Clase">Invitados a Clase</option>
+            	        <option value = "Conferencia">Conferencia</option>
+            	        <option value = "Conversatorio">Conversatorio</option>
+            	        <option value = "Simposio">Simposio</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act7"> <!-- Servicio Institucional -->
+            	    <label for = "act7">Servicio Institucional</label> <br>
+            	    <select id = "actividad7">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Mentorías">Mentorías</option>
+            	        <option value = "Proyecto">Proyecto</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act8"> <!-- Experiencias Internacionales Estudiantes -->
+            	    <label for = "act8">Experiencias Internacionales Estudiantes</label> <br>
+            	    <select id = "actividad8">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Intercambio">Intercambio</option>
+            	        <option value = "Estancias">Estancias</option>
+            	        <option value = "Cursos Internacionales">Cursos Internacionales</option>
+            	        <option value = "Adádeum">Adádeum</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act9"> <!-- Proyectos Relevantes de Estudiantes -->
+            	    <label for = "act9">Proyectos Relevantes de Estudiantes</label> <br>
+            	    <select id = "actividad9">
+            	        <option disabled selected>Seleccione una opción...</option>
+            	        <option value = "Proyecto">Proyecto</option>
+            	        <option value = "Mención">Mención</option>
+            	        <option value = "Organización de Evento">Organización de Evento</option>
+            	    </select>
+            	</div>
+            	<div class = "hidden" id = "act0"> <!-- Otro... -->
+            	    <label for = "actOther">Otro...</label> <br>
+            	    <input type = "text" id = "actOther" placeholder = "Nombre de Actividad"/>
+            	</div>
+			<div> <!-- Producción CIEN y CECE -->
+				<label for = "produccion">Forma parte de...</label> <br>
+				<input type = "radio" id, name = "produccion" value = "CIEN">
+					<label for = "cien">Producción CIEN</label>
+				<input type = "radio" id, name = "produccion" value= "CECE">
+					<label for = "cece">Producción CECE</label>
+				<input type = "radio" id, name = "produccion" value = "Ninguno">
+					<label for = "ninguno">Ninguno</label>
+			</div>
+        </div>
+        <div>  <!-- Divisor de sección 3 -->
+            <div> <!-- Título de sección 3 -->
+                <h3>Información Adicional</h3>
+            </div>
+            <div> <!-- Fecha -->
+                <label for = "fecha">Fecha</label> <br>
+                <input type = "date" id = "fecha">
+            </div>
+            <div> <!-- Descripción General -->
+                <label for = "descripcion">Descripción General</label> <br>
+                <textarea name = "descripcion" id = "descripcion" cols = "30" rows = "10" placeholder = "Descripción General"></textarea>
+            </div>
+            <div> <!-- Subir Evidencia -->
+                <label for = "archivo">Subir Evidencia</label> <br>
+                <input type = "file" id = "archivo" name = "archivo">
+            </div>
+        </div>
+    </div>
+	<div class = "buttons"> <!-- Acciones -->
+		<button type = "reset" onclick = "hide()">Borrar</button>
+		<button id = "submitBtn">Enviar</button>
+	</div>
+	</form>
+	<script src = "scripts/firebase.js" type = "module"></script>
+    <script src = "scripts/main.js"></script>
+</body>

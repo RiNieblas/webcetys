@@ -1,18 +1,22 @@
 // Importa las funciones que necesites de las SDKs que necesites
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getDatabase, ref, set, child, update, remove } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
 // TODO: Agrega SDKs para productos de Firebase que quieras usar
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Tu configuración de aplicación de Firebase
 // Para Firebase JS SDK v7.20.0 y posterior, measurementId es opcional
 const firebaseConfig = {
-	apiKey: "AIzaSyDhNHAZLNaErGnSXFksaM5iMdepR6T7f-M",
-	authDomain: "formulariocetys.firebaseapp.com",
-	projectId: "formulariocetys",
-	storageBucket: "formulariocetys.appspot.com",
-	messagingSenderId: "786278037128",
-	appId: "1:786278037128:web:fd592d510172cb054f513d",
+    apiKey: "AIzaSyDhNHAZLNaErGnSXFksaM5iMdepR6T7f-M",
+    authDomain: "formulariocetys.firebaseapp.com",
+    databaseURL: "https://formulariocetys-default-rtdb.firebaseio.com",
+    projectId: "formulariocetys",
+    storageBucket: "formulariocetys.appspot.com",
+    messagingSenderId: "786278037128",
+    appId: "1:786278037128:web:fd592d510172cb054f513d",
+    measurementId: "G-2L5T3V24WK"
 };
 
 // Inicializar Firebase
