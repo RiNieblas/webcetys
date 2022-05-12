@@ -1,0 +1,45 @@
+<!-- TODO:
+	* Organizar jerarquía de la base de datos para que no se borre ninguna actividad.
+	* Cambiar value del select de actividades para que tenga el mismo nombre que la actividad seleccionada.
+	* Realizar verificación de datos en JS para que no se suban formularios vacíos.
+    * Hacer que el input de la fecha tenga como predeterminado la fecha actual (tal vez esto funciona por default).
+    * Crear una función que mande correo electrónico de aviso para cada Dirección correspondiente.
+    * Crear un sistema con usuarios que pueden modificar la base de datos.
+    * Estilar la página de la manera más uniforme posible con CSS.
+    * Hacer la página responsiva, que se adapte bien a diferentes tamaños de pantalla.
+	* Si hace parte de un centro, por favor indíquelo (para generación de conocimiento)
+-->
+
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web CETYS</title>
+	<link href = "https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "src/styles.css">
+</head>
+<body>
+	<header>
+		<h1>Colegio de Administración y Negocios</h1>
+	</header> <br>
+	<div>
+		<form id = "login-form">
+			<div class = "container">
+				<div>
+					<h2>Bienvenido</h2>
+				</div>
+				<div>
+                	<input type = "email" name = "email" id = "email" placeholder = "Correo electrónico">
+				</div>
+				<div>
+                	<input type = "password" name = "password" id = "password" placeholder = "Contraseña">
+				</div>
+			</div>
+			<div class = "buttons">
+				<button id = "loginBtn">Iniciar Sesión</button>
+			</div>
+		</form>
+	</div>
+</body>
+<script src = "scripts/firebase.js" type = "module"></script>
+</html>
